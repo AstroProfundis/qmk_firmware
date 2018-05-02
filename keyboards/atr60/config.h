@@ -15,19 +15,18 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CONFIG_H_ADMSTROK
-#define CONFIG_H_ADMSTROK
+#ifndef CONFIG_H
+#define CONFIG_H
 
 #include "config_common.h"
-#include "../../config.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6060
-#define DEVICE_VER      0x0003
-#define MANUFACTURER    SATAN
-#define PRODUCT         GH60
-#define DESCRIPTION     QMK keyboard firmware for Satan GH60 with WS2812 support
+#define VENDOR_ID       0x2333
+#define PRODUCT_ID      0x0B38
+#define DEVICE_VER      0x47FD
+#define MANUFACTURER    ATR
+#define PRODUCT         GH60 Customized Keyboard Gen1
+#define DESCRIPTION     QMK based GH60 keyboard by ATR
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -48,25 +47,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MATRIX_HAS_GHOST
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
+#define DEBOUNCING_DELAY 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
-/* Backlight configuration */
+/* key combination for command */
+#define IS_COMMAND() ( \
+    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+)
+
+/* Backlight configuration
+ */
 #define BACKLIGHT_LEVELS 4
 
-/* Underlight configuration */
+/* Underlight configuration
+ */
+
 #define RGB_DI_PIN E2
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 8     // Number of LEDs
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 17
-
-#define DISABLE_SPACE_CADET_ROLLOVER
 
 /*
  * Feature disable options
