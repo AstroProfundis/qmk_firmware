@@ -23,11 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6060
-#define DEVICE_VER      0x0003
-#define MANUFACTURER    SATAN
-#define PRODUCT         GH60
-#define DESCRIPTION     QMK keyboard firmware for Satan GH60 with WS2812 support
+#define PRODUCT_ID      0x0B38
+#define DEVICE_VER      0x47FD
+#define MANUFACTURER    ATR
+#define PRODUCT         GH60 Customized Keyboard Gen1
+#define DESCRIPTION     QMK based GH60 keyboard by ATR
 
 /* key matrix size */
 #define MATRIX_ROWS 5
